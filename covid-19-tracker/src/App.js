@@ -7,6 +7,7 @@ import { MenuItem } from '@material-ui/core';
 import InfoBox from './InfoBox';
 import Map from './Map';
 import Table from './Table';
+import {sortData} from './util';
 
 
 function App() {
@@ -36,8 +37,10 @@ function App() {
             value: country.countryInfo.iso2
           }));
 
+          const sortedData = sortData(data);
           setCountries(countries);
-          setTableData(data);
+          setTableData(sortedData);
+          
       });
     };
 
