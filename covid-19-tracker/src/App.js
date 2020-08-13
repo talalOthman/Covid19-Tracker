@@ -10,6 +10,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
+  const [tableData, setTableData] = useState([]);
 
 
   useEffect(() =>{
@@ -33,6 +34,7 @@ function App() {
           }));
 
           setCountries(countries);
+          setTableData(data);
       });
     };
 
@@ -84,7 +86,7 @@ function App() {
       <div className="app__stats">
         <InfoBox title="Coronavirus Cases" cases={countryInfo.todayCases} total={countryInfo.cases}/>
         <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered}/>
-        <InfoBox title="Deaths" cases= {countryInfo.todayDeaths} total={country.deaths}/>
+        <InfoBox title="Deaths" cases= {countryInfo.todayDeaths} total={countryInfo.deaths}/>
       </div>
 
       <Map />
