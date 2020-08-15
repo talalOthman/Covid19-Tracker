@@ -5,6 +5,10 @@
     color: #6a5d4d;
 }
 
+.table::-webkit-scrollbar{
+    display: none;
+}
+
 .table tr{
     display: flex;
     justify-content: space-between;
