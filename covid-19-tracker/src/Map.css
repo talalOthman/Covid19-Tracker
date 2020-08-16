@@ -26,3 +26,14 @@
 .containerInfo{
     width: 150px;
 }
+
+.nameInfo{
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.confirmedInfo, .recoveredInfo, .deathsInfo{
+    font-size: 13px;
+    margin-top: 5px;
+}
