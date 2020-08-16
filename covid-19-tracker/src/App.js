@@ -9,6 +9,7 @@ import Map from './Map';
 import Table from './Table';
 import {sortData} from './util';
 import LineGraph from './LineGraph';
+import "leaflet/dist/leaflet.css";
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796});
+  const [mapZoom, setMapZoom] = useState(3);
 
 
   useEffect(() =>{
@@ -96,7 +99,10 @@ function App() {
         <InfoBox title="Deaths" cases= {countryInfo.todayDeaths} total={countryInfo.deaths}/>
       </div>
 
-      <Map />
+      <Map 
+      center={mapCenter}
+      zoom={mapZoom}
+      />
       </div>
       
 
