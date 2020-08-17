@@ -1,10 +1,13 @@
 .infoBox{
     flex: 1;
+    cursor: pointer;
 }
 
 .infoBox:not(:last-child){
     margin-right: 15px;
 }
+
+
 
 .infoBox__cases{
     color: #cc1034;
